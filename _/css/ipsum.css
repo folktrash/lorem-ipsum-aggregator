@@ -1,0 +1,181 @@
+/*reset*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video
+																				{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section	{display:block;}
+nav ul																			{list-style:none;}
+a																				{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
+.offscreen 																		{position:absolute;left:-50000px;}
+
+@font-face {font-family:'GibsonRegular';src: url('../font/gibson-regular-webfont.eot');src: url('../font/gibson-regular-webfont.eot?#iefix') format('embedded-opentype'),url('../font/gibson-regular-webfont.woff') format('woff'),url('../font/gibson-regular-webfont.ttf') format('truetype'),url('../font/gibson-regular-webfont.svg#GibsonRegular') format('svg');font-weight:normal;font-style:normal;}
+@font-face {font-family:'GibsonSemiBold';src: url('../font/gibson-semibold-webfont.eot');src: url('../font/gibson-semibold-webfont.eot?#iefix') format('embedded-opentype'),url('../font/gibson-semibold-webfont.woff') format('woff'),url('../font/gibson-semibold-webfont.ttf') format('truetype'),url('../font/gibson-semibold-webfont.svg#GibsonSemiBold') format('svg');font-weight:normal;font-style:normal;}
+@font-face {font-family:'GibsonLight';src: url('../font/gibson-light-webfont.eot');src: url('../font/gibson-light-webfont.eot?#iefix') format('embedded-opentype'),url('../font/gibson-light-webfont.woff') format('woff'),url('../font/gibson-light-webfont.ttf') format('truetype'),url('../font/gibson-light-webfont.svg#GibsonLight') format('svg');font-weight:normal;font-style:normal;}
+
+/*base layout given to all, mobile first ftw*/
+body {
+	font-family:GibsonLight, Helvetica, Arial, Sans-serif;
+	background-color:#331301;
+}
+
+strong 							{font-family:GibsonSemibold, Helvetica, Arial, Sans-serif;font-weight:normal;}
+h1, h2, h3, h4					{color:#fff;font-weight:normal;}
+
+a {
+	color:#fc0;
+	text-decoration:none;
+}
+
+a:hover, a:focus {
+	
+}
+
+header {
+	padding:1.0em;
+}
+
+header h1 {
+	font-size:3.6em;
+	line-height:0.9em;
+	color:rgba(255,255,255,0.8);
+	letter-spacing:-2px;
+	margin-bottom:0.2em;
+	
+	text-shadow: 1px 1px 10px rgba(0,0,0,0.5); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+}
+
+header h1 strong {
+
+}
+
+article {
+	padding:0;
+}
+
+nav {
+	font-size:1.5em;
+
+}
+
+nav li {
+	border-top:1px solid rgba(255,255,255,0.4);
+	border-bottom:1px solid rgba(0,0,0,0.3);
+}
+
+/* nav li:nth-child(1) {border-top:0;} */
+
+nav a {
+	display:block;
+	padding:0.5em;
+	border-left:4px solid #4d1d02;
+	background-color:rgba(255,255,255,0.3);
+}
+
+nav a:before {
+	content:'» ';
+}
+
+nav a:hover, nav a:focus {
+	background-color:rgba(255,255,255,1);
+}
+
+/* desktop
+#lorems {
+	-webkit-column-count: 2;  -webkit-column-gap: 15px; 
+	   -moz-column-count: 2;     -moz-column-gap: 15px; 
+			column-count: 2;          column-gap: 15px; 
+			
+			column-break-after:avoid;
+			-webkit-column-break-after:avoid;
+}
+*/
+
+.entry {
+	list-style:none;
+	margin:0;
+	padding:0;
+	padding:1.0em;
+	font-size:1.6em;
+	
+	border-top:1px solid rgba(255,255,255,0.1);
+	border-bottom:1px solid rgba(0,0,0,0.9);
+	
+	background-color:rgba(255,255,255,0.05);
+}
+
+.entry:last-child {
+	border-bottom:0;
+}
+
+.entry p {
+	color:rgba(255,255,255,0.4);
+	font-size:0.8em;
+}
+
+.entry a {
+	font-size:0.6em;
+	display:block;
+	padding:0.5em 0;
+	margin-top:0.5em;
+	
+	background-image:url(../img/arrow.png);
+	background-position:-45px 50%;
+	background-repeat:no-repeat;
+	
+	padding-left:40px;
+}
+
+.entry:after {
+	/* content: '<div>»</div>'; */
+}
+
+
+.touched {
+	background-color:rgba(255,255,255,0.6);
+}
+
+.touched a {
+	color:#8f3125;
+}
+
+.touched p {color:#331301;}
+.touched h1 {color:#331301;}
+
+
+
+
+@media screen and (min-width:401px) and (max-width:640px) {/*mobile landscape*/
+	
+	header h1 {
+		font-size:2.6em;
+		letter-spacing:0px;
+	}
+	
+	.entry a {
+		background:none;
+		padding-left:0;
+	}
+	
+	.entry {
+		background-image:url(../img/arrow.png);
+		background-position:95% 50%;
+		background-repeat:no-repeat;
+	}
+	
+	.entry p {
+		padding-right:20%;
+	}
+	
+}
+
+@media screen and (min-width:641px) and (max-width:879px) {/*tablet portrait*/
+
+}
+
+@media screen and (min-width:880px) and (max-width:1090px) {/*tablet lanscape & desktop*/
+
+}
+
+@media screen and (min-width:1091px) {/*hd version*//*@media screen and (min-width:1091px) {*/
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {/*iPhone 2xImages*/}
